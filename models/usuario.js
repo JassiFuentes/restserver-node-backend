@@ -37,7 +37,8 @@ const UsuarioSchema = Schema({
 //sacar el password y __v version de mi DB
 UsuarioSchema.methods.toJSON = function() {
     // saco __v y password y el resto lo unifico en una cte que llame usuario
-    const { __v, password, ...usuario } = this.toObject();
+    const { __v, password, _id, ...usuario } = this.toObject();
+    usuario.uid = _id;
     return usuario
     
 }

@@ -77,7 +77,7 @@ const usuariosPatch = (req, res) => {
     })
 }
 
-const usuariosDelete = async(req, res) => {
+const usuariosDelete = async(req, res = response) => {
 
     const { id } = req.params;
 
