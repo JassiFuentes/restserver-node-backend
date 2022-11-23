@@ -34,7 +34,7 @@
             const body = { id_token: response.credential }
 
             //fetch api, 1er arg url endpoint, 2do arg configuraicones especificar tipo de peticion sino por defecto sera GET
-            fetch('http://localhost:8080/api/auth/google' | 'https://restserver-back.herokuapp.com', {
+            fetch('http://localhost:8080/api/auth/google' || 'https://restserver-back.herokuapp.com/api/auth/google', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
